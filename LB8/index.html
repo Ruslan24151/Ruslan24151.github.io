@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Слайдер Товарів</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .swiper-container {
+      width: 80%;
+      max-width: 1200px;
+      overflow: hidden;
+      border: 2px solid #333;
+      border-radius: 8px;
+      background: #fff;
+      position: relative;
+      padding: 10px 60px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .swiper-slide img {
+      max-width: 80%;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    .price {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    .price .old-price {
+      text-decoration: line-through;
+      color: #a00;
+      font-size: 0.9em;
+      margin-right: 5px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn.add-to-cart {
+      background: #28a745;
+      color: #fff;
+    }
+
+    .btn.soon {
+      background: #ccc;
+      color: #666;
+      cursor: not-allowed;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 50%;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    .swiper-button-prev {
+      left: 30px;
+    }
+
+    .swiper-button-next {
+      right: 30px;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <h3>Категорія: Мисливська зброя</h3>
+        <img src="images/product1.jpg" alt="Товар 1">
+        <p>Гвинтівка Remington</p>
+        <div class="price">
+          <span class="old-price">1200₴</span>
+          <span class="new-price">900₴</span>
+        </div>
+        <button class="btn add-to-cart">У корзину</button>
+      </div>
+      <div class="swiper-slide">
+        <h3>Категорія: Пістолети</h3>
+        <img src="images/product2.jpg" alt="Товар 2">
+        <p>Пістолет Glock 19</p>
+        <div class="price">
+          <span>1500₴</span>
+        </div>
+        <button class="btn add-to-cart">У корзину</button>
+      </div>
+      <div class="swiper-slide">
+        <h3>Категорія: Аксесуари</h3>
+        <img src="images/product3.jpg" alt="Товар 3">
+        <p>Приціл OpticsX</p>
+        <div class="price">
+          <span>700₴</span>
+        </div>
+        <button class="btn soon">Незабаром у продажу</button>
+      </div>
+      <div class="swiper-slide">
+        <h3>Категорія: Спорядження</h3>
+        <img src="images/product4.jpg" alt="Товар">
+        <p>Бронежилет</p>
+        <div class="price">
+          <span>2000₴</span>
+        </div>
+        <button class="btn add-to-cart">У корзину</button>
+      </div>
+      <div class="swiper-slide">
+        <h3>Категорія: Оптика</h3>
+        <img src="images/product5.jpg" alt="Товар">
+        <p>Приціл</p>
+        <div class="price">
+          <span>2500₴</span>
+        </div>
+        <button class="btn add-to-cart">У корзину</button>
+      </div>
+      <div class="swiper-slide">
+        <h3>Категорія: Мішені</h3>
+        <img src="images/product6.jpg" alt="Товар">
+        <p>Комплект мішеней</p>
+        <div class="price">
+          <span>500₴</span>
+        </div>
+        <button class="btn add-to-cart">У корзину</button>
+      </div>
+      <div class="swiper-slide">
+        <h3>Категорія: Луки</h3>
+        <img src="images/product7.jpg" alt="Товар">
+        <p>Лук ArcherX</p>
+        <div class="price">
+          <span>4000₴</span>
+        </div>
+        <button class="btn add-to-cart">У корзину</button>
+      </div>
+      <div class="swiper-slide">
+        <h3>Категорія: Патрони</h3>
+        <img src="images/product8.jpg" alt="Товар">
+        <p>Набір патронів</p>
+        <div class="price">
+          <span>1200₴</span>
+        </div>
+        <button class="btn soon">Незабаром</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="swiper-button-prev"></button>
+  <button class="swiper-button-next"></button>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</body>
+
+</html>
